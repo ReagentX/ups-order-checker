@@ -2,11 +2,6 @@ import re
 import mechanize
 
 
-'''
-Ensure you have the mechanize library installed: `pip install mechanize`
-To run: cd to the directory and run `python check.py`
-'''
-
 def new_browser():
     """ Returns a new mechanize browser instance """
 
