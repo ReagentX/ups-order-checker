@@ -39,7 +39,7 @@ def fill_form(reference, country, zip_code):
         print "Parameter error"
 
 
-reference = raw_input("Enter reference number: ")
+reference = raw_input("Enter reference number: ") #  Generally phone number, no parenthesis or dashes
 country = raw_input("Enter 2-char country code: ").lower()[:2]
 zip_code = raw_input("Enter zip code: ")
 
