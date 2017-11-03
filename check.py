@@ -10,6 +10,7 @@ def new_browser():
 
 
 def fill_form(reference, country, zip_code):
+
     # Create the browser instance
     browser = new_browser()
     browser.open('https://wwwapps.ups.com/WebTracking/track?loc=en_US')
@@ -18,7 +19,7 @@ def fill_form(reference, country, zip_code):
     browser.select_form(nr=4)
     browser.set_all_readonly(False)
 
-    # Set the firm's values
+    # Set the form's values
     browser.form.controls[1].value = country
     browser.form.controls[3].value = reference
     browser.form.controls[11].value = [country]
@@ -26,7 +27,7 @@ def fill_form(reference, country, zip_code):
 
     # Parse the response
     response = browser.submit()
-    
+
     # Save the response so we can parse it
     html = response.read()
     if 'UPS could not locate the shipment details for your request' in html:
